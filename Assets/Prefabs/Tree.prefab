@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4561723473934518}
   - component: {fileID: 212627437297129526}
   - component: {fileID: 61034431416719224}
+  - component: {fileID: 114315750714431410}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252071741403772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.84, y: 0.88, z: -1}
+  m_LocalPosition: {x: 5.3416567, y: 3.080215, z: -1}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,10 +54,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0012510419, y: 0}
+  m_Offset: {x: -0.015349537, y: 0.31003883}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.035393346}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -64,8 +65,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5115495, y: 1}
+  m_Size: {x: 0.3282705, y: 0.66177577}
   m_EdgeRadius: 0
+--- !u!114 &114315750714431410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1252071741403772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f56dcac2c350247aa744fc4795c446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  age: 0
+  wood: 100
+  rare: 0
+  clipped: 0
 --- !u!212 &212627437297129526
 SpriteRenderer:
   m_ObjectHideFlags: 1
