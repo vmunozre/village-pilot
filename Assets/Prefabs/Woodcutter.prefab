@@ -21,6 +21,11 @@ GameObject:
   - component: {fileID: 4540271678510184}
   - component: {fileID: 212596672765396764}
   - component: {fileID: 61408380449863102}
+  - component: {fileID: 114674974021038144}
+  - component: {fileID: 114403234930100078}
+  - component: {fileID: 114466831166119172}
+  - component: {fileID: 114113893616129728}
+  - component: {fileID: 114182793769270902}
   m_Layer: 0
   m_Name: Woodcutter
   m_TagString: Untagged
@@ -35,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691015347980756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.46, y: -1.26, z: -2}
+  m_LocalPosition: {x: -0.75, y: -1.55, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,6 +71,72 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5357034, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114113893616129728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691015347980756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48db658bdbb6b69489d709ecbeed93c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  target: {fileID: 0}
+--- !u!114 &114182793769270902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691015347980756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b913d4b7315f1c045967e2e7d7434e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  target: {fileID: 0}
+  recoveringDuration: 30
+--- !u!114 &114403234930100078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691015347980756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce69b2cc2019fc4c8de3f31ec29dab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
+  energy: 100
+  moveSpeed: 2
+--- !u!114 &114466831166119172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691015347980756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dce210c51f44554bb5df0504a001d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114674974021038144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691015347980756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828b7dcbb30bdef45ae7be939b87242e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  target: {fileID: 0}
+  cuttingDuration: 2
 --- !u!212 &212596672765396764
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4592960216498988}
   - component: {fileID: 212107426185752856}
   - component: {fileID: 61746346009782494}
+  - component: {fileID: 114239173646350572}
   m_Layer: 0
   m_Name: Warehouse
   m_TagString: Untagged
@@ -66,6 +67,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9670123, y: 1.2825173}
   m_EdgeRadius: 0
+--- !u!114 &114239173646350572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064062731669138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c676fa5cd20cc4bafc71f0630f7d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
+  food: 0
 --- !u!212 &212107426185752856
 SpriteRenderer:
   m_ObjectHideFlags: 1
