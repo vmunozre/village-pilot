@@ -7,7 +7,7 @@ public class CutWoodAction : GoapAction
     private TreeEntity targetTree; // where we get the ore from
 
     private float startTime = 0;
-    public float cuttingDuration = 2; // seconds
+    public float cuttingDuration = 3; // seconds
 
     public CutWoodAction()
     {
@@ -70,8 +70,13 @@ public class CutWoodAction : GoapAction
 
     public override bool perform(GameObject agent)
     {
+        
         if (startTime == 0)
+        {
+            Woodcutter woodcutter = (Woodcutter)agent.GetComponent(typeof(Woodcutter));
+            woodcutter.cutting = true;
             startTime = Time.time;
+        }
 
         if (Time.time - startTime > cuttingDuration)
         {
@@ -88,6 +93,7 @@ public class CutWoodAction : GoapAction
                 woodcutter.wood += targetTree.wood;
                 targetTree.wood = 0;
             }
+            woodcutter.cutting = false;
             woodcutter.energy -= 40;
             cutted = true;
         }

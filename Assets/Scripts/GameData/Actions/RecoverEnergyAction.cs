@@ -69,12 +69,17 @@ public class RecoverEnergyAction : GoapAction
     public override bool perform(GameObject agent)
     {
         if (startTime == 0)
+        {
+            Woodcutter woodcutter = (Woodcutter)agent.GetComponent(typeof(Woodcutter));
+            woodcutter.recovering = true;
             startTime = Time.time;
+        }
 
         if (Time.time - startTime > recoveringDuration)
         {
             Woodcutter woodcutter = (Woodcutter)agent.GetComponent(typeof(Woodcutter));
             woodcutter.energy = 100;
+            woodcutter.recovering = false;
             recovered = true;
         }
         return true;

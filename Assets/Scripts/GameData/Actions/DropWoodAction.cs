@@ -7,6 +7,9 @@ public class DropWoodAction : GoapAction
     private bool droppedWood = false;
     private WarehouseEntity targetWarehouse; // where we drop off the ore
 
+    private float startTime = 0;
+    public float dropDuration = 1.5f; // seconds
+
     public DropWoodAction()
     {
         addPrecondition("hasWood", true); // can't drop off ore if we don't already have some
@@ -19,6 +22,7 @@ public class DropWoodAction : GoapAction
     {
         droppedWood = false;
         targetWarehouse = null;
+        startTime = 0;
     }
 
     public override bool isDone()
@@ -69,12 +73,21 @@ public class DropWoodAction : GoapAction
 
     public override bool perform(GameObject agent)
     {
-        Woodcutter woodcutter = (Woodcutter)agent.GetComponent(typeof(Woodcutter));
-        targetWarehouse.wood += woodcutter.wood;
-        woodcutter.wood = 0;
-        droppedWood = true;
-        //TODO play effect, change actor icon
+        if (startTime == 0)
+        {
+            Woodcutter woodcutter = (Woodcutter)agent.GetComponent(typeof(Woodcutter));
+            woodcutter.keeping = true;
+            startTime = Time.time;
+        }
 
+        if (Time.time - startTime > dropDuration)
+        {
+            Woodcutter woodcutter = (Woodcutter)agent.GetComponent(typeof(Woodcutter));
+            targetWarehouse.wood += woodcutter.wood;
+            woodcutter.wood = 0;
+            woodcutter.keeping = false;
+            droppedWood = true;
+        }
         return true;
     }
 }

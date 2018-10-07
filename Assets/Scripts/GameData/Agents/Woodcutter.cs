@@ -8,16 +8,24 @@ public class Woodcutter : MonoBehaviour, IGoap
     public int energy = 100;
     public float moveSpeed = 2;
 
+    // Estados para las animaciones
+    public bool cutting = false;
+    public bool recovering = false;
+    public bool keeping = false;
 
+
+    private Animator animator;
     void Start()
     {
-       
+        animator = GetComponent<Animator>();
     }
 
 
     void Update()
     {
-
+        animator.SetBool("cutting", cutting);
+        animator.SetBool("keeping", keeping);
+        animator.SetBool("recovering", recovering);
     }
 
     /**
