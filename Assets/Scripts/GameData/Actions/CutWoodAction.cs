@@ -94,7 +94,7 @@ public class CutWoodAction : GoapAction
                 targetTree.wood = 0;
             }
             woodcutter.cutting = false;
-            woodcutter.energy -= 40;
+            woodcutter.energy -= 51;
             cutted = true;
         }
         return true;
